@@ -1,6 +1,7 @@
 FROM eclipse-temurin:21
 
 # VOLUME /tmp
+# VOLUME /src
 
 ARG JAR_FILE=build/libs/*.jar
 
