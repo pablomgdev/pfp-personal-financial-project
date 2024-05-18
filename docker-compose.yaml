@@ -8,15 +8,15 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - DATABASE_URL=jdbc:postgresql://database:5432/postgres
+      - DATABASE_URL=jdbc:postgresql://operations-api-database:5432/postgres
       - DATABASE_USERNAME=postgres
       - DATABASE_PASSWORD=postgres
     depends_on:
-      - database
+      - operations-api-database
 
-  database:
+operations-api-database:
     image: postgres:16.1
-    container_name: operations-database
+    container_name: operations-api-database
     # todo: check restart strategies to use the most appropriate one
     restart: always
     environment:
