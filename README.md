@@ -46,7 +46,7 @@ Un fondo es un registro con la cantidad de dinero de la que dispone un usuario y
 #### Fondo Global
 - El usuario debe disponer de un fondo global para saber de dinero dispone entre todos sus fondos.
 ### Traspasos
-> ![NOTE]
+> [!NOTE]
 > Podría ser una [operación]() pero que implique la adición de dos registros en base de datos (uno para quitar y otro para añadir una cantidad en un [fondo]()). Pensar.
 Un traspaso es una cantidad de dinero que un usuario decide mover de un [fondo]() a otro.
 - El usuario puede traspasar una cantidad de un [fondo]() a otro.
