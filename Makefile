@@ -11,7 +11,7 @@ remove-containers:
 	@docker ps -a --filter "name=pfp-*" -q | xargs -r docker rm -f
 
 project-up:
-	@docker-compose up
+	@docker-compose up --detached
 
 project-down:
-	@docker-compose up
+	@docker-compose down
