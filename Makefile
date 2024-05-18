@@ -1,3 +1,9 @@
+up:
+	@docker-compose up -d
+
+down:
+	@docker-compose down
+
 build-image:
 	@docker build -t pfp-operations-api .
 
@@ -9,9 +15,3 @@ remove-images:
 
 remove-containers:
 	@docker ps -a --filter "name=pfp-*" -q | xargs -r docker rm -f
-
-project-up:
-	@docker-compose up --detached
-
-project-down:
-	@docker-compose down
