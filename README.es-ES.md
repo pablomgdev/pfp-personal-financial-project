@@ -60,7 +60,7 @@ Una deuda es una cantidad negativa generada por una [operación](README.es-ES.md
 - El usuario puede consultar la cantidad de su [fondo global](README.es-ES.md#fondos-global) sin tener en cuenta la deuda para saber de cuánto dispondría sin ella.
 ### Límites
 Un límite es una cantidad que puede esteblecerse para una [categoría](README.es-ES.md#categor%C3%ADas) concreta para tener el conocimiento de cuánto debe gastar como máximo un usuario en un periodo de tiempo. Ejemplo: para la [categoría](README.es-ES.md#categor%C3%ADas) "viajes" se establece un límite de 500 euros al mes.
-- El usuario puede establecer un límite entre dos fechas.
+- El usuario puede establecer un límite.
 - El usuario puede eliminar un límite.
 - El usuario puede modificar un límite.
 ### Importar/exportar datos
