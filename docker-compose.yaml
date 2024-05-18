@@ -14,13 +14,13 @@ services:
     depends_on:
       - operations-api-database
 
-operations-api-database:
+  operations-api-database:
     image: postgres:16.1
-    container_name: operations-api-database
+    container_name: pfp-operations-api-database
     # todo: check restart strategies to use the most appropriate one
     restart: always
     environment:
-      POSTGRES_DB: pfp-operations-db
+      POSTGRES_DB: pfp-operations-api-database
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
