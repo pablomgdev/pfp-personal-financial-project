@@ -64,7 +64,7 @@ Un límite es una cantidad que puede esteblecerse para una [categoría](README.e
 - El usuario puede eliminar un límite.
 - El usuario puede modificar un límite.
 ### Importar/exportar datos
-> [!NOTA]
+> [!NOTE]
 > Esto sería más adelante.
 - El usuario puede importar sus datos en diferentes formatos como JSON, Excel, CSV...
 - El usuario puede exportar sus datos en diferentes formatos como JSON, Excel, CSV...
