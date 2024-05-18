@@ -13,16 +13,25 @@
 ## Funcionalidades
 ### Operaciones
 Una operación es el ingreso/gasto de un usuario.
+#### General
 - El usuario puede añadir ingresos y gastos.
 - El usuario puede eliminar ingresos y gastos.
 - El usuario puede consultar sus ingresos y gastos (cantidad, [categoría](), descripción, fecha...).
 - El usuario puede filtrar sus ingresos y gastos para acotar sus búsquedas (por [categoría](), fecha, fondo...).
+#### Periodicas
+- El usuario puede crear una operación periódica para añadir sus ingresos/gastos mensuales, semanales...
+- El usuario puede eliminar una operación periódica para añadir sus ingresos/gastos mensuales, semanales...
+- El usuario puede modificar una operación periódica de manera puntual o permanente.
 ### Categorías
 Una categoría es una etiqueta que se asocia a una [operación]() para clasificarla y poder realizar acciones, como filtros o cálculos, en base a esta.
+#### General
 - El usuario puede crear categorías para sus ingresos y gastos.
 - El usuario puede eliminar categorías para sus ingresos y gastos.
 - El usuario puede consultar sus categorías.
 - El usuario puede recategorizar sus ingresos y gastos.
+#### Periodicidad
+- El usuario puede categorizar la cantidad de una [operación periódica]() al momento de crearla para indicar a qué categorías afecta. Puede indicar qué porcentaje/cantidad de esa operación se destinará a unas categorías y qué porcentaje/cantidad se destinará a otras categorías.
+- El usuario puede cambiar la categorización establecida para una [operación periódica]() de manera puntual o permanente.
 ### Fondos
 Un fondo es un registro con la cantidad de dinero de la que dispone un usuario y que es afectado por las [operaciones]() realizadas sobre una o más [categorías]() concretas.
 #### General
@@ -42,7 +51,11 @@ Un fondo es un registro con la cantidad de dinero de la que dispone un usuario y
 Un traspaso es una cantidad de dinero que un usuario decide mover de un [fondo]() a otro.
 - El usuario puede traspasar una cantidad de un [fondo]() a otro.
 - El usuario puede deshacer un traspaso previamente realizado.
+- El usuario puede añadir una descripción a sus traspasos.
 ### Deuda
 Una deuda es una cantidad negativa generada por una [operación]() o un [traspaso]() en un [fondo]().
 - El usuario puede consultar la cantidad de su [fondo global]() teniendo en cuenta la deuda para saber cuánto dinero tiene.
 - El usuario puede consultar la cantidad de su [fondo global]() sin tener en cuenta la deuda para saber de cuánto dispondría sin ella.
+### Importar/exportar datos
+- El usuario puede importar sus datos en diferentes formatos como JSON, Excel, CSV...
+- El usuario puede exportar sus datos en diferentes formatos como JSON, Excel, CSV...
