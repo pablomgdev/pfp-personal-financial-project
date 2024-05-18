@@ -56,14 +56,13 @@ Un traspaso es una cantidad de dinero que un usuario decide mover de un [fondo](
 Una deuda es una cantidad negativa generada por una [operación]() o un [traspaso]() en un [fondo]().
 - El usuario puede consultar la cantidad de su [fondo global]() teniendo en cuenta la deuda para saber cuánto dinero tiene.
 - El usuario puede consultar la cantidad de su [fondo global]() sin tener en cuenta la deuda para saber de cuánto dispondría sin ella.
-### Objetivos
-> [!NOTE]
-> Continuar por aquí. Revisar esta parte y definir bien el concepto y para qué lo necesita el usuario y sus condiciones.
-Un objetivo es una cantidad de dinero que debe tener un fondo en una fecha.
-#### General
-- El usuario puede establecer un objetivo para saber información como cuánto dinero le queda, si podrá llegar a esa cantidad con los ingresos/gastos que lleva y suele hacer, etc.
-#### Periódico
-- El usuario puede establecer un objetivo periódico.
+### Límites
+Un límite es una cantidad que puede esteblecerse para una [categoría]() concreta para tener el conocimiento de cuánto debe gastar como máximo un usuario en un periodo de tiempo. Ejemplo: para la [categoría]() "viajes" se establece un límite de 500 euros al mes.
+- El usuario puede establecer un límite entre dos fechas.
+- El usuario puede eliminar un límite.
+- El usuario puede modificar un límite.
 ### Importar/exportar datos
+> [!NOTA]
+> Esto sería más adelante.
 - El usuario puede importar sus datos en diferentes formatos como JSON, Excel, CSV...
 - El usuario puede exportar sus datos en diferentes formatos como JSON, Excel, CSV...
