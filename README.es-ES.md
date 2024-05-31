@@ -12,6 +12,15 @@
 > [!NOTE]
 > Pendiente añadir descripción.
 
+## Sobre el Proyecto
+- El directorio **database/init.sql/** contiene los scripts de la base de datos que se ejecutarán al levantar los servicios con **docker-compose** (al ejecutar la imagen de PostgreSQL).
+- El directorio **doc/** contiene documentación relativa al proyecto.
+  - En el subdirectorio **database/** se puede encontrar información sobre la base de datos.
+  - En el subdirectorio **endpoints/** se pueden encontrar las llamadas HTTP.
+- El directorio **src/** contiene el código de la aplicación.
+- Dentro del directorio **src/main/resources/db/migration/Postgres/** se encuentran los scripts para las migraciones de base de datos usados por Flyway.
+- El archivo **Makefile** contiene una serie de comandos útiles para agilizar ciertas tareas repetitivas.
+
 ## Funcionalidades
 ### Operaciones
 Una operación es el ingreso/gasto de un usuario.
