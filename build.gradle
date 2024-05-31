@@ -16,15 +16,22 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.postgresql:postgresql'
-	implementation 'org.flywaydb:flyway-core'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	// only developing
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	// only during compilation
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.flywaydb:flyway-core'
+	// only during execution
+	runtimeOnly 'org.postgresql:postgresql'
+	// only during tests compilation
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	// only during test execution
+	testRuntimeOnly 'com.h2database:h2'	// used to avoid problems building because of tests
+	// testRuntimeOnly 'org.junit.platform:junit-platform-launcher'	// spring-boot-starter-test already cover this
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+	systemProperty 'spring.profiles.active', 'test'	// to set environment as test when running the tests
 }
