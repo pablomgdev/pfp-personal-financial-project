@@ -21,6 +21,7 @@
 - El directorio **src/** contiene el código de la aplicación.
 - Dentro del directorio **src/main/resources/db/migration/Postgres/** se encuentran los scripts para las migraciones de base de datos usados por Flyway.
 - El archivo **Makefile** contiene una serie de comandos útiles para agilizar ciertas tareas repetitivas.
+- Se puede crear un archivo **env.properties** en **src/main/resources/** con secretos. Este archivo no se subirá al repositorio.
 ### Tecnologías
 - **Java 21**
 - **PostgreSQL 16.1**
