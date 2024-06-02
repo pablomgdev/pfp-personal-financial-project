@@ -1,5 +1,6 @@
 package es.pablomgdev.pfppersonalfinancialproject.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.UUID;
 
@@ -28,7 +29,7 @@ public class Account {
     private String description;
 
     @Column(name = "total_amount")
-    private Double totalAmount;
+    private BigDecimal totalAmount;
 
     @Column(name = "created_date")
     private Date createdDate;
@@ -77,11 +78,11 @@ public class Account {
       this.description = description;
     }
 
-    public Double getTotalAmount() {
+    public BigDecimal getTotalAmount() {
       return totalAmount;
     }
 
-    public void setTotalAmount(Double totalAmount) {
+    public void setTotalAmount(BigDecimal totalAmount) {
       this.totalAmount = totalAmount;
     }
 

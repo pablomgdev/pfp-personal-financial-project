@@ -1,5 +1,6 @@
 package es.pablomgdev.pfppersonalfinancialproject.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.UUID;
 
@@ -22,7 +23,7 @@ public class Operation {
     private Integer internalId;
 
     @Column(name = "amount")
-    private Double amount;
+    private BigDecimal amount;
 
     @Column(name = "description", length = 255)
     private String description;
@@ -64,11 +65,11 @@ public class Operation {
       this.internalId = internalId;
     }
 
-    public Double getAmount() {
+    public BigDecimal getAmount() {
       return amount;
     }
 
-    public void setAmount(Double amount) {
+    public void setAmount(BigDecimal amount) {
       this.amount = amount;
     }
 
