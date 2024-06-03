@@ -1,17 +1,44 @@
-up:
-	@docker-compose up -d
+BUILD_DIR = build
+DATABASE_DATA_DIR = database/data
+CONTAINER_NAME = pfp-operations-api$
 
-down:
-	@docker-compose down
+clean:
+	@echo "Cleaning directories... ($(BUILD_DIR) $(DATABASE_DATA_DIR))"
+	@rm -rf $(BUILD_DIR) $(DATABASE_DATA_DIR)
 
-build-image:
-	@docker build -t pfp-operations-api .
-
-run-image:
-	@docker run -p 4321:8080 --name pfp-operations-api pfp-operations-api
-
-remove-images:
+remove-pfp-images:
+	@echo "Removing PFP images..."
 	@docker images --filter "reference=pfp-*" -q | xargs -r docker rmi -f
 
-remove-containers:
-	@docker ps -a --filter "name=pfp-*" -q | xargs -r docker rm -f
+down:
+	@echo "Removing containers brought up with docker-compose..."
+	@docker-compose down
+
+stop: down
+
+build-api: clean
+	@echo "Building API (./gradlew build)..."
+	@./gradlew build
+
+run-api:
+	@echo "Running ./gradlew bootRun..."
+	@./gradlew bootRun
+
+up: down clean remove-pfp-images build-api
+	@echo "Bringing up all services with docker-compose..."
+	@docker-compose up -d
+
+up-without-api: down
+	@echo "Bringing up all services with docker-compose except the API..."
+	@docker-compose up operations-api-database pgadmin -d
+
+default-run: down clean up-without-api run-api
+
+realtime-api-logs:
+	@CONTAINER_ID=$$(docker ps -a -q --filter "name=$(CONTAINER_NAME)" | head -n 1) && \
+	if [ -n "$$CONTAINER_ID" ]; then \
+		echo "Container ID: $$CONTAINER_ID"; \
+		docker logs -f $$CONTAINER_ID; \
+	else \
+		echo "No container found with the name $(CONTAINER_NAME)"; \
+	fi
