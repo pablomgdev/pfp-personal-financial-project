@@ -15,7 +15,7 @@ services:
       - operations-api-database
 
   operations-api-database:
-    image: postgres:16.1
+    image: postgres:16.3
     container_name: pfp-operations-api-database
     # todo: check restart strategies to use the most appropriate one
     restart: always
